@@ -21,10 +21,8 @@ nodes = network.shortest_path(start, goal)
 
 for u, v in pairwise(nodes):
     node_color[v] = nodecolor
-    edge_color[u, v] = edgecolor
-    edge_color[v, u] = edgecolor
-    edge_width[u, v] = edgewidth
-    edge_width[v, u] = edgewidth
+    edge_color[u, v] = edge_color[v, u] = edgecolor
+    edge_width[u, v] = edge_width[v, u] = edgewidth
 
 node_color[start] = (255, 0, 0)
 node_color[goal] = (0, 0, 255)
