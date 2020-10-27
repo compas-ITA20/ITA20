@@ -15,6 +15,8 @@ for point in cloud:
 for node in network.nodes():
     point = network.node_coordinates(node)
     for nbr in tree.nearest_neighbors(point, 4, distance_sort=True):
+        if nbr[2] < 1e-6:
+            continue
         if not network.has_edge(node, nbr[1], directed=False):
             network.add_edge(node, nbr[1])
 
