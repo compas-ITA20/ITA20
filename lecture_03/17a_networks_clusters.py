@@ -14,7 +14,7 @@ network = Network()
 network.update_default_node_attributes({'cluster': None, 'base': False})
 
 cloud = Pointcloud.from_bounds(10, 5, 3, 100)
-kmeans = KMeans(n_clusters=10, n_init=2000, max_iter=1000).fit(array(cloud, dtype=float))
+kmeans = KMeans(n_clusters=10, n_init=500, max_iter=100).fit(array(cloud, dtype=float))
 
 clusters = {}
 for i, point in zip(kmeans.labels_, cloud):
