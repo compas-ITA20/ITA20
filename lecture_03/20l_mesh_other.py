@@ -10,7 +10,6 @@ MAXDEV = 0.005
 KMAX = 500
 
 igl = Proxy('compas_libigl')
-# igl.restart_server()
 
 mesh = Mesh.from_off(compas.get('tubemesh.off'))
 
